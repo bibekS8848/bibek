@@ -1,51 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Bibek Shrestha Official Website</title>
-        <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="bibek.JPG" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <!-- Font Awesome icons (free version)-->
-        <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
-        <!-- Google fonts-->
-        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
-        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
-    </head>
-    <body id="page-top">
-        <!-- Masthead-->
-        <header class="masthead bg-primary text-white text-center">
-            <div class="container d-flex align-items-center flex-column">
-                <!-- Masthead Avatar Image-->
-                <img class="masthead-avatar mb-5" src="bibek.jpg" alt="..." />
-                <!-- Masthead Heading-->
-                <h1 class="masthead-heading text-uppercase mb-0">Bibek Shrestha</h1>
-                <!-- Masthead Subheading-->
-                <p class="masthead-subheading font-weight-light mb-0">I just can't give up. Came too far for it to happen.</p>
-                <nav>
-                    <a href="https://www.youtube.com/channel/UC7FlAPEaI_vYfZ6BrGNXpzg"><i class="fab fa-youtube"></i></a>
-                    <a href="https://www.facebook.com/Stha.bibekjazz"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://github.com/bibekS8848/bibekS8848"><i class="fab fa-github"></i></a>
-                </nav>
-              
-               
-            </div>
-        </header>
-        <!-- Copyright Section-->
-        <div class="copyright py-4 text-center text-white">
-            <div class="container"><small>Copyright &copy; 2022 Bibek Shrestha</small></div>
-        </div>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-    </body>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Bibek Shrestha Photography</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    background:#000;
+    color:#fff;
+}
+
+nav{
+    position:fixed;
+    width:100%;
+    padding:20px 50px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(0,0,0,0.7);
+    backdrop-filter:blur(10px);
+    z-index:1000;
+}
+
+nav h1{
+    font-weight:300;
+    letter-spacing:4px;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:30px;
+}
+
+nav ul li a{
+    color:#ccc;
+    text-decoration:none;
+    font-size:14px;
+    letter-spacing:2px;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#fff;
+}
+
+.hero{
+    height:100vh;
+    background:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee') center/cover no-repeat;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    position:relative;
+}
+
+.hero::after{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.6);
+}
+
+.hero-content{
+    position:relative;
+    z-index:1;
+}
+
+.hero h2{
+    font-size:60px;
+    font-weight:300;
+    letter-spacing:6px;
+}
+
+.hero p{
+    margin-top:20px;
+    font-size:18px;
+    color:#ddd;
+}
+
+.section{
+    padding:100px 10%;
+    text-align:center;
+}
+
+.section h3{
+    font-weight:300;
+    letter-spacing:4px;
+    margin-bottom:60px;
+    font-size:30px;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(300px,1fr));
+    gap:20px;
+}
+
+.gallery img{
+    width:100%;
+    height:400px;
+    object-fit:cover;
+    transition:0.4s;
+}
+
+.gallery img:hover{
+    transform:scale(1.05);
+}
+
+.about{
+    max-width:800px;
+    margin:auto;
+    color:#ccc;
+    line-height:1.8;
+}
+
+.contact input,
+.contact textarea{
+    width:100%;
+    padding:15px;
+    margin:10px 0;
+    background:#111;
+    border:1px solid #333;
+    color:#fff;
+}
+
+.contact button{
+    padding:15px 40px;
+    background:#fff;
+    border:none;
+    cursor:pointer;
+    font-weight:600;
+    letter-spacing:2px;
+    transition:0.3s;
+}
+
+.contact button:hover{
+    background:#ccc;
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    background:#111;
+    color:#777;
+    font-size:14px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav>
+    <h1>Bibek Shrestha</h1>
+    <ul>
+        <li><a href="#home">HOME</a></li>
+        <li><a href="#portfolio">PORTFOLIO</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+    </ul>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero" id="home">
+    <div class="hero-content">
+        <h2>Bibek Shrestha Photography</h2>
+        <p>Contemporary Landscape & Storytelling Imagery</p>
+    </div>
+</section>
+
+<!-- Portfolio -->
+<section class="section" id="portfolio">
+    <h3>PORTFOLIO</h3>
+    <div class="gallery">
+        <img src="https://source.unsplash.com/800x800/?landscape" />
+        <img src="https://source.unsplash.com/800x801/?mountain" />
+        <img src="https://source.unsplash.com/800x802/?nature" />
+        <img src="https://source.unsplash.com/800x803/?forest" />
+        <img src="https://source.unsplash.com/800x804/?ocean" />
+        <img src="https://source.unsplash.com/800x805/?sunset" />
+    </div>
+</section>
+
+<!-- About -->
+<section class="section" id="about">
+    <h3>ABOUT</h3>
+    <div class="about">
+        <p>
+            Bibek Shrestha is a contemporary photographer capturing atmospheric landscapes and authentic visual stories. 
+            His work focuses on light, emotion, and composition to create timeless imagery.
+        </p>
+    </div>
+</section>
+
+<!-- Contact -->
+<section class="section contact" id="contact">
+    <h3>CONTACT</h3>
+    <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">SEND MESSAGE</button>
+    </form>
+</section>
+
+<footer>
+    © 2026 Bibek Shrestha Photography — All Rights Reserved
+</footer>
+
+</body>
 </html>
